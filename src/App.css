@@ -1,7 +1,1 @@
 @import "tailwindcss";
-
-@layer base {
-  #root {
-    @apply bg-teal-400 min-h-screen max-h-screen flex items-center justify-center;
-  }
-}
