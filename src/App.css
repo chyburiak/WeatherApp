@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@layer base {
+
+    #root {
+        @apply bg-radial-[at_50%_75%] from-sky-400 via-blue-700 to-indigo-900 to-85% min-h-screen;
+    }
+}
