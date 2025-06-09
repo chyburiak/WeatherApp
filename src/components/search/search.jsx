@@ -23,7 +23,7 @@ const Search = () => {
     };
 
     const onSelectCity = (city) => {
-        setQuery(city.name);
+        setQuery(`${city.name}, ${city.countryCode}`);
         setCities(null);
     }
 
