@@ -11,7 +11,7 @@ const TodayWeather = ()=> {
                 </div>
 
                 <div className="w-1/2 flex flex-col gap-2">
-                    <h3 className="text-3xl mb-2">Details:</h3>
+                    <h3 className="text-3xl font-bold mb-2">Details</h3>
 
                     <p className="text-2xl text-gray-600">Feels like: 22°C</p>
                     <p className="text-2xl text-gray-600">Wind: 10 km/h</p>
