@@ -23,7 +23,7 @@ const Search = () => {
     };
 
     const onSelectCity = (city) => {
-        setQuery(`${city.name}, ${city.countryCode}`);
+        setQuery(city);
         setCities(null);
     }
 
@@ -42,7 +42,7 @@ const Search = () => {
                 autoComplete="off"
                 autoCorrect="off"
                 type="search"
-                value={query}
+                value={typeof query === 'string' ? query : query.name}
                 onChange={handleChange}
                 placeholder="Find your city"
                 className='w-full text-base sm:text-2xl py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600'
