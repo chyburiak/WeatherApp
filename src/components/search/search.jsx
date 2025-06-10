@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { geoApiOptions, GEODB_API_URL } from '../../api';
 import { useDebouncedCallback } from "use-debounce";
+import { useQuery } from '../../context/QueryContext.jsx';
 
 const Search = () => {
-    const [query, setQuery] = useState('');
+    const { query, setQuery } = useQuery();
     const [cities, setCities] = useState('');
 
     const getCities = useDebouncedCallback(async () => {
@@ -14,7 +15,7 @@ const Search = () => {
         } catch (error) {
             console.error('Error fetching cities:', error);
         }
-    }, 500);
+    }, 800);
 
     const handleChange = (e) => {
         const value = e.target.value;
